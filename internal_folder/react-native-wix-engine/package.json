@@ -1,0 +1,66 @@
+{
+  "name": "rn-os-engine",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "description": "",
+  "scripts": {
+    "android": "internal_folder/react-native-wix-engine/bin/engine -p demo-modules/moduleList.json -a",
+    "ios": "internal_folder/react-native-wix-engine/bin/engine -p demo-modules/moduleList.json -i",
+    "start-empty-engine": "internal_folder/react-native-wix-engine/bin/engine -ia",
+    "build-ts": "tsc",
+    "build-ios": "node internal_folder/react-native-wix-engine/scripts/build_scripts/build_ios",
+    "build-android": "node internal_folder/react-native-wix-engine/scripts/build_scripts/build_android",
+    "build": "tsc && node internal_folder/react-native-wix-engine/scripts/build_scripts/build_all",
+    "release": "cd internal_folder/react-native-wix-engine && npm publish",
+    "generate_configuration": "internal_folder/react-native-wix-engine/bin/generate_configuration -r ./ -j demo-modules/moduleList.json",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "bin": {
+    "rn-os-config": "./bin/generate_configuration",
+    "rn-os-engine": "./bin/engine"
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "^1.12.1",
+    "@react-native-community/blur": "3.6.0",
+    "@react-native-community/datetimepicker": "2.1.0",
+    "@react-native-community/netinfo": "5.6.2",
+    "@react-native-community/picker": "1.6.5",
+    "argparse": "1.0.10",
+    "colors": "1.4.0",
+    "lodash": "4.17.15",
+    "node-fetch": "1.7.3",
+    "react": "16.11.0",
+    "react-autobind": "1.0.6",
+    "react-native": "0.62.2",
+    "react-native-gesture-handler": "1.8.0",
+    "react-native-navigation": "6.12.2",
+    "react-native-reanimated": "1.13.1",
+    "react-native-ui-lib": "5.14.0",
+    "remx": "^3.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.58.0",
+    "react-test-renderer": "16.11.0",
+    "typescript": "^3.7.5",
+    "@types/lodash": "4.14.161",
+    "@types/npm": "^2.0.31"
+  },
+  "engineConfig": {
+    "modules": []
+  }
+}
